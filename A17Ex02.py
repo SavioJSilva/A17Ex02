@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+numeros = list()
+while True:
+    n = int(input('Digite um numero: '))
+    if n not in numeros:
+        numeros.append(n)
+        print('Numero adicionado com sucesso!')
+    else:
+        print('Esse numero ja foi adicionado, não irei adicionar novamente!')
+    r = str(input('Quer continuar? [S/N] ')).upper().strip()
+    while r not in 'SsNn':
+        r = str(input('Quer continuar? [S/N] ')).upper().strip()
+    if r in 'Nn':
+        break
+print('--' * 30)
+numeros.sort()
+print(f'Você digitou os valores {numeros}')
